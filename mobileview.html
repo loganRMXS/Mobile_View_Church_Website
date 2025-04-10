@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dunamis Children Church</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/logo.png.jpg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: lightgray;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 999;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    .banner-area {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .banner-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(img/logo.png.jpg) center/cover no-repeat;
+      z-index: -1;
+    }
+
+    .banner-img::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .banner-area h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .banner-area h1 span {
+      color: #bf0a30;
+    }
+
+    .banner-btn {
+      background-color: #bf0a30;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .about-area,
+    .services-area,
+    .contact-area {
+      background: #fff;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .section-title span {
+      color: #bf0a30;
+    }
+
+    .about-content,
+    .services-content,
+    .contact-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .about-left,
+    .services-content li,
+    .contact-content li {
+      flex: 1 1 300px;
+    }
+
+    .about-left {
+      background: url(img/6aaf5fb5-32cd-4413-aefd-e9ebaa708bc9.jpg) center/cover no-repeat;
+      min-height: 300px;
+    }
+
+    .about-right {
+      text-align: left;
+    }
+
+    .msg-area {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/2e2c4ff6-fa65-44aa-912d-3209fdfb058d.jpg) center/cover no-repeat;
+      color: white;
+    }
+
+    .msg-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      background: black;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="#"><img src="img/logo.png-removebg-preview.png" alt="Logo"></a>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner-area">
+    <div class="banner-img"></div>
+    <div data-aos="zoom-in">
+      <h3>Dunamis Children Church</h3>
+      <h1>A Trusted Child <span>An Excellent Destiny</span></h1>
+      <a class="banner-btn" href="#about">More Info</a>
+    </div>
+  </section>
+
+  <section class="about-area" id="about">
+    <h3 class="section-title">About <span>Us</span></h3>
+    <div class="about-content">
+      <div class="about-left"></div>
+      <div class="about-right">
+        <h2>We Teach Your Child To Grow In The Way Of The Lord</h2>
+        <p>Weekly classes to teach your child about the word, and make him/her a better person and Christian at a young age. <strong style="color: #bf0a30;">ISN'T THAT GREAT!!!</strong></p>
+        <p><i class="fa fa-arrow-right"></i> Bible Lessons</p>
+        <p><i class="fa fa-arrow-right"></i> Games</p>
+        <p><i class="fa fa-arrow-right"></i> Vacation Bible School</p>
+        <p><i class="fa fa-arrow-right"></i> Counselling and Heart to Heart Talks</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="msg-area">
+    <div class="msg-content">
+      <h2>Quote of the Day</h2>
+      <p>"Love is living your life with the full consideration of the feelings, emotions and wellbeing of others." <br> ~ Pastor Paul Enenche</p>
+    </div>
+  </section>
+
+  <section class="services-area" id="services">
+    <h3 class="section-title">Our <span>Activities</span></h3>
+    <div class="services-content">
+      <li>
+        <img src="img/6aaf5fb5-32cd-4413-aefd-e9ebaa708bc9.jpg" alt="Bible Lessons">
+        <h4>Bible Lessons</h4>
+        <p>Bible Lessons every Sunday to grow your child spiritually.</p>
+      </li>
+      <li>
+        <img src="img/16d5c951-031b-457a-907a-ff3ce34f2961.jpg" alt="Events">
+        <h4>Events</h4>
+        <p>To help your child understand the word practically.</p>
+      </li>
+      <li>
+        <img src="img/2e2c4ff6-fa65-44aa-912d-3209fdfb058d.jpg" alt="Games">
+        <h4>Games</h4>
+        <p>To help your child have fun and enjoy games to boost their intellect.</p>
+      </li>
+    </div>
+  </section>
+
+  <section class="contact-area" id="contact">
+    <h3 class="section-title">Contact <span>Us</span></h3>
+    <div class="contact-content">
+      <li>
+        <i class="fa fa-map-marker"></i>
+        <p>Plot 902, Arab Road<br>Kubwa, Abuja, Nigeria</p>
+      </li>
+      <li>
+        <i class="fa fa-phone"></i>
+        <p>09038134221<br>08158172200</p>
+      </li>
+      <li>
+        <i class="fa fa-envelope"></i>
+        <p>dunamisgospel.com<br>nwogadavid90@gmail.com</p>
+      </li>
+    </div>
+  </section>
+
+  <footer>
+    <p>All Rights Reserved by <span style="color: gold; font-weight: bold;">Dunamis Children Church</span> in Collaboration with Nwoga David 2025</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
